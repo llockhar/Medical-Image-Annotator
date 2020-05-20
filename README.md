@@ -1,4 +1,4 @@
-# medical-image-annotator
+# Medical-Image-Annotator
 Annotating landmarks (e.g. embryonic cell centroids) in medical grayscale images with graphical image annotation tool.
 
 ## Getting Started
@@ -21,14 +21,16 @@ Shortcuts can be found [here](https://github.com/tzutalin/labelImg#hotkeys). Not
 It may be desirable to save landmark coordinates as a 2D mask array for further analysis. This is done by initializing a 2D array of 0s, then assigning 1 to centroid coordinates. Additionally, Gaussian smoothing can be applied to balance foreground/background distribution.
 Gaussian smoothed landmark masks are created by running.
 ```
-python xmltomask.py --xml_path path_to_xml_fils --mask_path path_to_desired_output --resize_dims optional_height_width_tuple_for_resizing --sigma optional_gaussian_kernel_sigma
+python xmltomask.py --xml_path path_to_xml_file --mask_path path_to_desired_output \
+--resize_dim  optional_height_width_int_for_resizing --sigma optional_gaussian_kernel_sigma
 ```
 To overlay the mask on original images, add the following arguments:
 ```
-python xmltomask.py --xml_path path_to_xml_fils --mask_path path_to_desired_output --resize_dims optional_height_width_tuple_for_resizing --sigma optional_gaussian_kernel_sigma \
+python xmltomask.py --xml_path path_to_xml_fils --mask_path path_to_desired_output \
+--resize_dim optional_height_width_int_for_resizing --sigma optional_gaussian_kernel_sigma \
 --overlay True --img_path path_to_original_images --overlay_path path_to_desired_overlay_output
 ```
 
-<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/OriginalImage.png" alt="Embryo Image" width="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/MaskOverlay.png" alt="Embryo Mask Overlay" width="300" />
+<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/EmbryoImage.png" alt="Embryo Image" width="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/MaskOverlay.png" alt="Embryo Mask Overlay" width="300" />
 
 

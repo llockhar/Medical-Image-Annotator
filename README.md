@@ -15,7 +15,7 @@ python labelImg.py
 ```
 Shortcuts can be found [here](https://github.com/tzutalin/labelImg#hotkeys). Note that this version creates landmarks, not rectangular boxes. As such, only the x,y landmark coordinates and number of objects are saved in the XML file.
 
-<img src="https://github.com/llockhar/medical-image-annotator/blob/master/AnnotatorGUI.png" alt="Annotator GUI" width="600" />
+<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/AnnotatorGUI.png" alt="Annotator GUI" width="600" />
 
 ### Saving Outputs as 2D Mask Array
 It may be desirable to save landmark coordinates as a 2D mask array for further analysis. This is done by initializing a 2D array of 0s, then assigning 1 to centroid coordinates. Additionally, Gaussian smoothing can be applied to balance foreground/background distribution.
@@ -29,6 +29,6 @@ python xmltomask.py --xml_path path_to_xml_fils --mask_path path_to_desired_outp
 --overlay True --img_path path_to_original_images --overlay_path path_to_desired_overlay_output
 ```
 
-<img src="https://github.com/llockhar/medical-image-annotator/blob/master/OriginalImage.png" alt="Embryo Image" width="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/MaskOverlay.png" alt="Embryo Mask Overlay" width="300" />
+<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/OriginalImage.png" alt="Embryo Image" width="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/MaskOverlay.png" alt="Embryo Mask Overlay" width="300" />
 
 

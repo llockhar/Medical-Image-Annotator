@@ -31,6 +31,6 @@ python xmltomask.py --xml_path path_to_xml_fils --mask_path path_to_desired_outp
 --overlay True --img_path path_to_original_images --overlay_path path_to_desired_overlay_output
 ```
 
-<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/EmbryoImage.png" alt="Embryo Image" height="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/MaskOverlay.png" alt="Embryo Mask Overlay" height="300" />
+<img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/EmbryoImage.png" alt="Embryo Image" height="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/CentroidMask.png" alt="Embryo Centroid Mask" height="300" /><img src="https://github.com/llockhar/medical-image-annotator/blob/master/demoImages/MaskOverlay.png" alt="Embryo Mask Overlay" height="300" />
 
 

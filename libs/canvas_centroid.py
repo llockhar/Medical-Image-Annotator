@@ -62,6 +62,7 @@ class Canvas(QWidget):
         self.verified = False
         self.drawSquare = False
         self.len_shapes = 0
+        self.drawGrid = False
 
     def setDrawingColor(self, qColor):
         self.drawingLineColor = qColor
@@ -458,12 +459,13 @@ class Canvas(QWidget):
             self.selectedShapeCopy.paint(p)
 
         # Paint Background
-        colour = QColor(0,0,175,128)
-        p.setPen(colour)
-        brush = QBrush(Qt.CrossPattern)
-        brush.setColor(colour)
-        p.setBrush(brush)
-        p.drawRect(QRectF(0.0, 0.0, 500.0, 500.0))
+        if self.drawGrid:
+            colour = QColor(0,0,175,128)
+            p.setPen(colour)
+            brush = QBrush(Qt.CrossPattern)
+            brush.setColor(colour)
+            p.setBrush(brush)
+            p.drawRect(QRectF(0.0, 0.0, 500.0, 500.0))
 
 
         # Paint rect
